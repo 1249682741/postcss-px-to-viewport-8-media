@@ -1,0 +1,43 @@
+{
+  "name": "postcss-px-to-viewport-8-media",
+  "version": "1.0.0",
+  "description": "A postcss plugin that extends the media query conversion on the basis of postcss-px-to-viewport-8-plugin",
+  "author": "pikachu",
+  "license": "ISC",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "pnpm run build"
+  },
+  "keywords": [
+    "postcss",
+    "vw"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1249682741/postcss-px-to-viewport-8-media.git"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.10.4",
+    "postcss": "^8.4.32",
+    "rollup": "^4.8.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
