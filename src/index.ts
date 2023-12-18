@@ -31,8 +31,8 @@ const postcssPxToViewport = (options: OptionType) => {
 
   const pxRegex = getUnitRegexp(opts.unitToConvert)
   const satisfyPropList = createPropListMatcher(opts.propList)
-  const landscapeRules: AtRule[] = []
-  const mediaRules: Array<{
+  let landscapeRules: AtRule[] = []
+  let mediaRules: Array<{
     mediaParam: string
     rules: AtRule[]
   }> = []
@@ -176,6 +176,7 @@ const postcssPxToViewport = (options: OptionType) => {
         })
         appendRule(landscapeRoot, landscapeRules)
         css.append(landscapeRoot)
+        landscapeRules = []
       }
       if (mediaRules.length > 0) {
         for (let i = 0; i < mediaRules.length; i++) {
@@ -188,6 +189,7 @@ const postcssPxToViewport = (options: OptionType) => {
           appendRule(mediaRoot, rules)
           css.append(mediaRoot)
         }
+        mediaRules = []
       }
     },
   }
