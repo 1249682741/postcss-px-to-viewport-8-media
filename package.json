@@ -1,6 +1,6 @@
 {
   "name": "postcss-px-to-viewport-8-media",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A postcss plugin that extends the media query conversion on the basis of postcss-px-to-viewport-8-plugin",
   "author": "pikachu",
   "license": "ISC",
